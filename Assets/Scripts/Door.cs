@@ -49,14 +49,14 @@ public class Door : MonoBehaviour
 
     private IEnumerator RotateTo(float value)
     {
-        Vector3 rot = transform.eulerAngles;
-        float startValue = rot.y; if (startValue > 1) startValue -= 360;
+        Vector3 rot = transform.localEulerAngles;
+        float startValue = rot.z; if (startValue > 1) startValue -= 360;
         currentTimer = 0;
         while (currentTimer < 1)
         {
             currentTimer += Time.fixedDeltaTime / 1.0f;
-            rot.y = startValue < value ? Mathf.SmoothStep(startValue, value, currentTimer) : Mathf.SmoothStep(value, startValue, 1 - currentTimer);
-            transform.eulerAngles = rot;
+            rot.z = startValue < value ? Mathf.SmoothStep(startValue, value, currentTimer) : Mathf.SmoothStep(value, startValue, 1 - currentTimer);
+            transform.localEulerAngles = rot;
             yield return new WaitForFixedUpdate();
         }
     }
