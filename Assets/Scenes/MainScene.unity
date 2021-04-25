@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 4
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 93a9abb790299d44eaad63d1ea5092df, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -319,7 +319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1134102247
 Light:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ Light:
     m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_Flare: {fileID: 12100000, guid: 54fbbf098d116effa00081aba8ad6659, type: 2}
+  m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1329,19 +1329,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 15.03
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.123
+      value: -0.387
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 20.51
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1349,7 +1349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1361,7 +1361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2805927929381460801, guid: c92dee1385ab84d43bbfc5c221d845c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
