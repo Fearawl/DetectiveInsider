@@ -86,10 +86,22 @@ public class Controller : MonoBehaviour
         }
     }
 
+    List<Room> triggeredRooms = new List<Room>();
+
     void OnTriggerEnter(Collider collider){
         Room room = collider.GetComponent<Room>();
         if (room != null){
+            triggeredRooms.Add(room);
             currentRoom = room;
+        }
+    }
+
+    void OnTriggerExit(Collider collider){
+        Room room = collider.GetComponent<Room>();
+        if (room != null){
+            triggeredRooms.Remove(room);
+            if (currentRoom == room)
+                currentRoom = triggeredRooms[0];
         }
     }
 }
