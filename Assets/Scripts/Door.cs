@@ -7,6 +7,8 @@ public class Door : MonoBehaviour
     bool opened;
     float currentTimer;
 
+    [SerializeField] private AudioSource audioSource;
+
     [SerializeField]
     private bool _locked;
     public bool Locked {
@@ -22,10 +24,14 @@ public class Door : MonoBehaviour
 
     public void Open()
     {
-        if (_locked) return;
+        if (_locked) {
+            PlayAudio("closed_door");
+            return;
+        }
         StopAllCoroutines();
         opened = true;
         StartCoroutine(RotateTo(-150));
+        PlayAudio("open_door");
     }
 
     public void Close()
@@ -46,6 +52,14 @@ public class Door : MonoBehaviour
     public void Unlock() => Locked = false;
 
     public void Lock() => Locked = true;
+
+    public void PlayAudio(string id){
+        audioSource.PlayOneShot(AudioList.Get(id));
+    }
+
+    public void PlayAudio(AudioClip clip){
+        audioSource.PlayOneShot(clip);
+    }
 
     private IEnumerator RotateTo(float value)
     {
