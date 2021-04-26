@@ -5,9 +5,8 @@ public class ItemInteractionTarget : MonoBehaviour
 {
     [System.Serializable]
     public class Interaction {
-        public string ItemID;
-        public UnityEvent Event;
         public bool OneTime;
+        public UnityEvent Event;
         private bool activated;
         public bool Active => !OneTime || !activated;
         public void OnActivated(){
@@ -17,7 +16,12 @@ public class ItemInteractionTarget : MonoBehaviour
         }
     }
 
-    public Interaction[] interactions = new Interaction[0];
+    [System.Serializable]
+    public class ItemInteraction : Interaction {
+        public string ItemID;
+    }
+
+    public ItemInteraction[] interactions = new ItemInteraction[0];
 
     public void Start() {}
 
